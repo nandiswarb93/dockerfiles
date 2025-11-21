@@ -1,24 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-    <h1>Hello i am nandiswar i an learing Devops</h1>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nandi — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#071024 0%,var(--bg) 100%); color:#e6eef8;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      display:flex; justify-content:center;
+    }
+    .wrap{width:100%; max-width:var(--max-width);} 
+    header{display:flex;align-items:center;gap:18px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2dd4bf);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#021826}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin:6px 0 0}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+
+    /* Main card */
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:var(--radius);padding:22px;box-shadow:0 6px 20px rgba(2,6,23,0.6);}
+
+    .hero{display:flex;gap:22px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:12px;flex:0 0 96px;background:linear-gradient(180deg,#17324a,#0a2540);display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:700}
+    .meta h2{margin:0;font-size:20px}
+    .meta p{margin:6px 0;color:var(--muted)}
+
+    .cta{margin-top:14px;display:flex;gap:10px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#4f46e5);color:white;text-decoration:none;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .section{margin-top:18px}
+    h3{margin:0 0 12px 0}
+    .about{color:var(--muted);line-height:1.6}
+
+    /* projects */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{background:var(--card);padding:12px;border-radius:10px}
+    .project h4{margin:0 0 6px 0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:var(--glass);padding:6px 8px;border-radius:8px;font-size:12px;color:var(--muted)}
+
+    /* sidebar */
+    .sidebar .box{background:var(--card);padding:16px;border-radius:12px;margin-bottom:14px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);padding:8px 10px;border-radius:8px;font-size:13px;color:var(--muted)}
+
+    .contact a{display:block;text-decoration:none;color:var(--muted);margin-bottom:8px}
+
+    footer{text-align:center;color:var(--muted);margin-top:22px;font-size:13px}
+
+    /* Responsive */
+    @media (max-width:960px){
+      .grid{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">N</div>
+        <div>
+          <h1>Nandi — Junior Developer</h1>
+          <p class="lead">Full‑stack | MERN | DevOps enthusiast • Open to new opportunities</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section>
+        <div class="card hero">
+          <div class="avatar">ND</div>
+          <div class="meta">
+            <h2>Hi — I'm Nandi</h2>
+            <p class="lead">I build reliable backend services and clean frontends. I enjoy automating infra and making systems observable.</p>
+            <div class="cta">
+              <a class="btn" href="#projects">See projects</a>
+              <a class="btn ghost" href="#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section about">
+          <h3>About</h3>
+          <p class="about">I am a junior developer focusing on JavaScript, Node.js, and React. I like working with AWS, Docker, and CI/CD pipelines. I build small, maintainable services and ship features fast.</p>
+        </div>
+
+        <div id="projects" class="card section">
+          <h3>Projects</h3>
+          <div class="projects">
+            <div class="project">
+              <h4>Expense Tracker (MERN)</h4>
+              <p>Microservice-based expense tracker with authentication, transactions API and a React dashboard.</p>
+              <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">Docker</span></div>
+            </div>
+
+            <div class="project">
+              <h4>RoboShop (Microservices)</h4>
+              <p>11 microservices demo using REST and event-driven patterns, deployed on AWS for load testing.</p>
+              <div class="tags"><span class="tag">Node.js</span><span class="tag">Kubernetes</span><span class="tag">CI/CD</span></div>
+            </div>
+
+            <div class="project">
+              <h4>Portfolio Website</h4>
+              <p>Static portfolio site with responsive design and contact form using Netlify functions.</p>
+              <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Netlify</span></div>
+            </div>
+
+            <div class="project">
+              <h4>DevOps Lab</h4>
+              <p>Automation scripts for spinning up lab environments and demoing LVM, disk grow and backups.</p>
+              <div class="tags"><span class="tag">Bash</span><span class="tag">AWS</span><span class="tag">Terraform</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h3>Experience highlights</h3>
+          <ul style="color:var(--muted);margin:10px 0 0 18px;line-height:1.6">
+            <li>Built backend services with Node.js and Express</li>
+            <li>Deployed microservices on AWS and Docker</li>
+            <li>Wrote CI pipelines and infra-as-code scripts</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="box">
+          <h3>Skills</h3>
+          <div class="skills">
+            <span class="skill">JavaScript</span>
+            <span class="skill">React</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Express</span>
+            <span class="skill">MongoDB</span>
+            <span class="skill">AWS</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Linux</span>
+          </div>
+        </div>
+
+        <div class="box contact" id="contact">
+          <h3>Contact</h3>
+          <a href="mailto:your.email@example.com">your.email@example.com</a>
+          <a href="https://github.com/your-username" target="_blank">github.com/your-username</a>
+          <a href="https://linkedin.com/in/your-linkedin" target="_blank">linkedin.com/in/your-linkedin</a>
+        </div>
+
+        <div class="box">
+          <h3>Download CV</h3>
+          <a class="btn" href="#">Download PDF</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      Built with ❤️ — customize this template and replace placeholders with your info.
+    </footer>
+  </div>
+</body>
 </html>
